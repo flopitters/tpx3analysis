@@ -1,15 +1,21 @@
-# Install
+## Overview
+Some analysis classes for calibration of the Timepix3 ASIC. For data taking, please see
+- https://gitlab.cern.ch/CLICdp/DAQs/SPIDR
+- https://gitlab.cern.ch/CLICdp/DAQs/SPIDR/tree/clean_up/software/python
+
+
+## Install
 At the folder's root type
 ```
 make  
 make test
 ```
 
-# Requirements
+## Requirements
 root
 
 
-# Usage
+## Usage
 
 Configure by editing 'algorithms/common.h'. Fix data paths etc. Recompile.
 
@@ -28,11 +34,10 @@ To analyse equalisation and noise use
 ./bin/run -a dev_analysis --dev [id] --thr_dac [value] --pol [value]
 ```
 
-# Examples
+## Examples
 
-Running full calibration chain
+Some examples
 ```
-./bin/run -a hello_world" << std::endl;
 ./bin/run -a dev_analysis --dev W0019_C07 --pol 0
 ./bin/run -a cal_analysis --dev W0019_C07 --thr_dac 1190 --ik_dac 10
 ./bin/run -a calibrate_testpulses --dev W0019_C07 --thr_dac 1190 --ik_dac 10
